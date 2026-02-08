@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>小小英语探险家</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="hero">
+        <h1>🌈 小小英语探险家</h1>
+        <p>点一点、听一听、选一选，一起学英语！</p>
+      </header>
+
+      <section class="card" aria-labelledby="vocab-title">
+        <h2 id="vocab-title">1) 单词乐园</h2>
+        <p class="tip">点击卡片听发音，学习单词和中文意思。</p>
+        <div id="word-grid" class="word-grid" role="list"></div>
+      </section>
+
+      <section class="card" aria-labelledby="quiz-title">
+        <h2 id="quiz-title">2) 小测验</h2>
+        <p class="tip">听英文单词，选出正确的图片/中文。</p>
+        <div class="quiz-box">
+          <button id="play-word" class="primary">🔊 播放单词</button>
+          <p id="quiz-word-hint" class="quiz-hint">准备好了吗？点击“开始下一题”</p>
+          <div id="quiz-options" class="quiz-options"></div>
+          <div class="quiz-actions">
+            <button id="next-question" class="secondary">开始下一题</button>
+          </div>
+          <p id="quiz-result" class="quiz-result" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="score-title">
+        <h2 id="score-title">3) 勇者积分</h2>
+        <div class="score-row">
+          <span>⭐ 得分：</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="score-row">
+          <span>🔥 连对：</span>
+          <strong id="streak">0</strong>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
